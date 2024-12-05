@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio - Kevin Garcia</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/bootstrap.min.V6.beta.access.css" />
+    <style>
+      .hero {
+        text-align: center;
+        padding: 50px 0;
+        background-color: #121212;
+      }
+      .hero img {
+        border-radius: 50%;
+        width: 150px;
+      }
+      .nav-item {
+        min-width: max-content;
+      }
+      .navbar-nav .nav-link .navbar-toggler-icon {
+        font-size: 1.5rem;
+        padding: 0.3rem 0.3rem;
+      }
+      #skills{
+        background-color:#121212;
+      }
+
+      .skills img {
+        width: 50px;
+        margin: 0 10px;
+      }
+      #about{
+        min-height: max-content;
+      }
+      #about .btn{
+        background-color: #edbfff;
+        color: #000;
+        border: none;
+      }
+      .shadow-white{
+        color: var(--color-primary);
+        text-shadow: 0px 0px 25px #a86969;
+      }
+      .carousel-item img {
+        max-width: 100%;
+      }
+      .form-control:focus{
+        color: #ffffff !important;
+      }
+      .nav-link:focus{
+        color: #e9dfe8;
+        text-shadow: #740070 0 0 20px;
+      }
+      .carousel-item{
+        height: 150px;
+      }
+      .collapse {
+        transition: all 0.4s ease-in-out;
+      }
+
+      .btn-outline-light {
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      .btn-outline-light:hover {
+        background-color: #edbfff;
+        color: #000;
+      }
+
+      /* Agrega un text-shadow cuando se expanda la tarjeta */
+      .collapse.show + .card-header {
+        text-shadow: #007274 0 0 20px;
+      }
+
+      /* Opcionalmente, para agregar el efecto cuando el texto se expande */
+      .collapse.show {
+        animation: fadeIn 0.4s ease-in-out;
+      }
+
+      /* Animación suave para el texto */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .card {
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+      }
+
+      #projects{
+        background-color: #121212;
+        margin-bottom: 10vh;
+      }
+      #contact{
+        background-color: #121212;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-primary sticky-top bg-blur">
+      <div class="container">
+        <button
+          class="navbar-toggler w-5"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav d-flex flex-row justify-content-center">
+            <li
+              class="nav-item me-3 border-bottom border-3 border-transparent mx-2"
+            >
+              <a class="nav-link text-uppercase fw-bold" href="#hero">Inicio</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link text-uppercase fw-bold" href="#about"
+                >Sobre Mí</a
+              >
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link text-uppercase fw-bold" href="#projects"
+                >Proyectos</a
+              >
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link text-uppercase fw-bold" href="#contact"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero vh-100">
+      <div class="container">
+        <img src="./images/keving.png" alt="Kevin Garcia" />
+        <h1 class="mt-3 text-shadow-primary">Kevin Garcia</h1>
+        <p>Web Developer, SYS Admin, Web Designer</p>
+        <a href="#about" class="btn btn-primary mt-4">Más sobre mí</a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 vh-100 d-flex align-items-center" style="background-color: #121212;">
+      <div class="container">
+        <div class="card mx-auto rounded-border shadow-lg" style="width: 80vw; background-color: rgba(255, 255, 255, 0.1); border: none;">
+          <div class="card-body">
+            <h2 class="card-title text-center text-light text-shadow-primary mb-4" style="font-size: 2.5rem;">Sobre Mí</h2>
+            <p class="card-text text-light text-center fs-5">
+              ¡Hola! Soy un apasionado desarrollador web y administrador de sistemas. Me encanta crear soluciones innovadoras y eficientes que hagan la vida más fácil y divertida.
+            </p>
+            <p class="card-text text-center fs-5 shadow-white">
+              Mis gustos:
+            </p>
+            <ul class="list-group list-group-flush" id="accordionParent">
+              <!-- Videojuegos -->
+              <li class="list-group-item bg-transparent text-light" id="videojuegos">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <i class="bi bi-controller me-2"></i> Videojuegos
+                  </div>
+                  <button class="btn btn-sm btn-outline-light" data-bs-toggle="collapse" data-bs-target="#collapseVideojuegos" aria-expanded="false" aria-controls="collapseVideojuegos">
+                    <i class="bi bi-chevron-down"></i>
+                  </button>
+                </div>
+                <div class="collapse mt-3" id="collapseVideojuegos" data-bs-parent="#accordionParent">
+                  <div class="card bg-dark text-light border-light">
+                    <div class="card-body text-center">
+                      <h5 class="card-title">Mi Canal de YouTube</h5>
+
+                      <img src="https://yt3.googleusercontent.com/cyBST5Lzhycb0h_rqpVgexXADsI-Ckmja41b4d7Fpb3Q4DxI9xajepZN2QgdIWrmnwCdJVDH_w=s160-c-k-c0x00ffffff-no-rj"alt="YouTube" class="img-fluid mb-3 rounded-circle" style="max-width: 150px;">
+                      <a href="https://www.youtube.com/channel/UCfly3C7k7phTbK-tACvJbvQ" target="_blank" class="btn btn-outline-primary mb-2">Visitar mi canal</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            
+              <!-- Música -->
+              <li class="list-group-item bg-transparent text-light" id="musica">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <i class="bi bi-music-note-beamed me-2"></i> Música
+                  </div>
+                  <button class="btn btn-sm btn-outline-light" data-bs-toggle="collapse" data-bs-target="#collapseMusica" aria-expanded="false" aria-controls="collapseMusica">
+                    <i class="bi bi-chevron-down"></i>
+                  </button>
+                </div>
+                <div class="collapse mt-3" id="collapseMusica" data-bs-parent="#accordionParent">
+                  <div class="card bg-dark text-light border-light">
+                    <div class="card-body text-center">
+                      <!-- Imagen de Quevedo -->
+                      <img src="https://www.lahiguera.net/musicalia/artistas/quevedo/disco/13879/tema/31468/quevedo_duro-portada.jpg" alt="Quevedo" class="img-fluid mb-3">
+                      <h5 class="card-title">Álbum de Quevedo</h5>
+                      <a href="https://open.spotify.com/intl-es/track/1JkI7KcMNuIBZZoWQkcveV" target="_blank" class="btn btn-outline-light mb-2">Escuchar en Spotify</a>
+                      <hr>
+                      <!-- Imagen de Myke Towers -->
+                      <img src="https://los40.com/resizer/v2/FAATFP2Q65KDPCKWIUAVWTCGOE.jpg?auth=e63880fd55c3ebfe97f0b55b3370f1115861630e6b5ac1128199ff07fb78ab99&quality=70&width=1200&height=900&smart=true" alt="Myke Towers" class="img-fluid mb-3">
+                      <h5 class="card-title">Álbum de Myke Towers</h5>
+                      <a href="https://open.spotify.com/intl-es/album/5qhxJXwhtjXAmCr22FXG3Q" target="_blank" class="btn btn-outline-light mb-2">Escuchar en Spotify</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- Series de Ciencia Ficción -->
+              <li class="list-group-item bg-transparent text-light" id="series">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <i class="bi bi-tv me-2"></i> Series de Ciencia Ficción
+                  </div>
+                  <button class="btn btn-sm btn-outline-light" data-bs-toggle="collapse" data-bs-target="#collapseSeries" aria-expanded="false" aria-controls="collapseSeries">
+                    <i class="bi bi-chevron-down"></i>
+                  </button>
+                </div>
+                <div class="collapse mt-3" id="collapseSeries" data-bs-parent="#accordionParent">
+                  <div class="card bg-dark text-light border-light">
+                    <div class="card-body text-center">
+                      <svg width="150px" height="150px" viewBox="-49.6 0 222 222" id="svg2" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style>.st0{fill:#b1060f;stroke:#000}.st1{fill:url(#path5719_1_)}.st2{fill:#e50914}</style> <g id="layer1" transform="translate(12.495 6.756)"> <g id="g4182"> <g id="g5747" transform="translate(81.631 113.771) scale(.29074)"> <path id="path4155" class="st0" d="M-52.5-412.3l-.3 168-.3 168-13.8-39v-.1l-17.9 374c17.6 49.6 27 76.1 27.1 76.2.1.1 10.1.7 22.2 1.3 36.6 1.8 82 5.7 116.5 10 8 1 14.8 1.5 15.3 1.1s.6-171.4.5-380.1l-.3-379.4h-149z"></path> <path id="path4157" class="st0" d="M-322-412.8V-33c0 208.9.2 380 .5 380.3.3.3 13.2-1 28.8-2.7 15.6-1.7 37.1-3.9 47.8-4.8 16.4-1.4 65.6-4.5 71.2-4.6 1.7 0 1.8-8.5 2-160.9l.3-160.9 11.9 33.6c1.8 5.2 2.4 6.8 4.2 11.9l17.9-373.9c-3.8-10.7-1.8-5.1-6.1-17.3-14.6-41.3-27-76.2-27.5-77.8l-1-2.8h-150z"></path> <path id="path5715" class="st0" d="M-52.5-412.3l-.3 168-.3 168-13.8-39v-.1l-17.9 374c17.6 49.6 27 76.1 27.1 76.2.1.1 10.1.7 22.2 1.3 36.6 1.8 82 5.7 116.5 10 8 1 14.8 1.5 15.3 1.1s.6-171.4.5-380.1l-.3-379.4h-149z"></path> <path id="path5717" class="st0" d="M-322-412.8V-33c0 208.9.2 380 .5 380.3.3.3 13.2-1 28.8-2.7 15.6-1.7 37.1-3.9 47.8-4.8 16.4-1.4 65.6-4.5 71.2-4.6 1.7 0 1.8-8.5 2-160.9l.3-160.9 11.9 33.6c1.8 5.2 2.4 6.8 4.2 11.9l17.9-373.9c-3.8-10.7-1.8-5.1-6.1-17.3-14.6-41.3-27-76.2-27.5-77.8l-1-2.8h-150z"></path> <radialGradient id="path5719_1_" cx="18038.016" cy="-146.44" r="368.717" gradientTransform="matrix(.07072 -.02449 -.897 -2.5906 -1526.665 25.194)" gradientUnits="userSpaceOnUse"> <stop offset="0"></stop> <stop offset="1" stop-opacity="0"></stop> </radialGradient> <path id="path5719" class="st1" d="M-322-412.8v213.2l150.2 398.4c0-9.1 0-14.1.1-24.5l.3-160.9 11.9 33.6C-93.5 234.2-58 334.6-57.8 334.8c.1.1 10.1.7 22.2 1.3 36.6 1.8 82 5.7 116.5 10 8 1 14.8 1.5 15.3 1.1.3-.3.5-84.1.5-202.4L-52.7-285l-.1 40.7-.3 168-13.8-39c-13.5-38.1-22.5-63.6-76.8-217-14.6-41.3-27-76.2-27.5-77.8l-1-2.8H-322v.1z"></path> <path id="path5721" class="st2" d="M-322-412.8l150.5 426.5v-.2l11.9 33.6C-93.5 234.2-58 334.6-57.8 334.8c.1.1 10.1.7 22.2 1.3 36.6 1.8 82 5.7 116.5 10 7.9 1 14.8 1.5 15.2 1.1L-53.1-76.4v.1l-13.8-39c-13.5-38.1-22.5-63.6-76.8-217-14.6-41.3-27-76.2-27.5-77.8l-1-2.8h-74.9l-74.9.1z"></path> </g> </g> </g> </g></svg>
+                      <h5 class="card-title">Stranger Things</h5>
+                      <a href="https://www.netflix.com/" target="_blank" class="btn btn-outline-primary mb-2">Ver en Netflix</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            
+              <!-- Programación -->
+              <li class="list-group-item bg-transparent text-light" id="programacion">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <i class="bi bi-code-slash me-2"></i> Programación
+                  </div>
+                  <button class="btn btn-sm btn-outline-light" data-bs-toggle="collapse" data-bs-target="#collapseProgramacion" aria-expanded="false" aria-controls="collapseProgramacion">
+                    <i class="bi bi-chevron-down"></i>
+                  </button>
+                </div>
+                <div class="collapse mt-3" id="collapseProgramacion" data-bs-parent="#accordionParent">
+                  <div class="card bg-dark text-light border-light">
+                    <div class="card-body text-center d-flex flex-column">
+                      <h5 class="card-title">Mi GitHub</h5>
+                      <div style="text-align: center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: white;">
+                          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                      </div>
+                      <a href="https://github.com/Kev1nGM/" target="_blank" class="btn btn-outline-primary mb-2">Ver en GitHub</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            
+            </ul>
+                  
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="skills" class="py-5" style="background-color: #181818;">
+      <div class="container">
+        <h2 class="text-center text-light mb-4 text-shadow-primary style="color: #edbfff; font-size: 2.5rem;">Skills</h2>
+        <div id="skillsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false" style="max-width: 80vw; margin: auto;">
+          <div class="carousel-inner text-center">
+            <div class="carousel-item active">
+              <div class="text-light">
+                <i class="bi bi-code-slash fs-1" style="color: #edbfff;"></i>
+                <h5 class="mt-3">Desarrollo Web</h5>
+                <p>HTML, CSS, php, JavaScript y algunos frameworks.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="text-light">
+                <i class="bi bi-terminal fs-1" style="color: #edbfff;"></i>
+                <h5 class="mt-3">Administración de Sistemas</h5>
+                <p>Configuración y gestión de servidores Linux y Windows.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="text-light">
+                <i class="bi bi-cloud fs-1" style="color: #edbfff;"></i>
+                <h5 class="mt-3">DevOps</h5>
+                <p>Integración y entrega continua, Docker, Kubernetes.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="text-light">
+                <i class="bi bi-shield-lock fs-1" style="color: #edbfff;"></i>
+                <h5 class="mt-3">Ciberseguridad</h5>
+                <p>Análisis de vulnerabilidades y soluciones de seguridad.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 vh-100">
+      <div class="container d-flex flex-column flex-wrap justify-content-between">
+        <h2 class="text-shadow-primary">Proyectos Destacados</h2>
+        <div class="project-1 d-flex flex-column flex-wrap justify-content-center align-items-center border-shadow-primary">
+          <div class="card-body d-flex vh-5 justify-content-center align-items-center">
+            <h5 class="card-title">Proyecto 1</h5>
+          </div>
+            <div class="d-flex flex-column justify-content-center mb-4">
+              <div class="card w-100 h-100">
+                <img
+                  src="./images/Reviewhub.png"
+                  class="card-img-top w-px-350 h-px-200"
+                  alt="Proyecto 2"
+                />
+                <div class="d-flex flex-column justify-content-center mb-2">
+                  <button
+                    class="btn btn-primary w-100 mt-2"
+                    data-bs-toggle="modal"
+                    data-bs-target="#project1Modal"
+                  >
+                    Leer Más
+                  </button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="project-2 d-flex flex-column flex-wrap justify-content-center align-items-center mt-3 border-shadow-primary">
+          <div class="card-body vh-5 d-flex justify-content-center align-items-center">
+            <h5 class="card-title">Proyecto 2</h5>
+          </div>
+          <div class="d-flex flex-column mb-4">
+            <div class="card w-100 h-100">
+              <img
+                src="./images/Spotify.png"
+                class="card-img-top w-px-350 h-px-200"
+                alt="Proyecto 2"
+              />
+              
+            <div class="card-body">
+              <button
+                  class="btn btn-primary w-100 mt-2"
+                  data-bs-toggle="modal"
+                  data-bs-target="#project2Modal"
+                >
+                  Leer Más
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        </div>
+    </section>
+    
+
+    <!-- Project Modals -->
+    <div
+      class="modal fade"
+      id="project1Modal"
+      tabindex="-1"
+      aria-labelledby="project1ModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="project1ModalLabel">Proyecto 1</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div
+              id="carouselExample"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active" style="min-height: 275px;">
+                  <img 
+                    class="w-100"
+                    src="./images/Reviewhub2.png"
+                    alt="Slide 1"
+                  />
+                </div>
+                <div class="carousel-item" style="min-height: 275px;">
+                  <img 
+                  class="w-100"
+                    src="./images/Reviewhub3.png"
+                    alt="Slide 2""
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+              </button>
+            </div>
+            <p>Detalles del proyecto 1...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="project2Modal"
+      tabindex="-1"
+      aria-labelledby="project2ModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="project1ModalLabel">Proyecto 2</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div
+              id="carouselExample2"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img 
+                    class="w-100"
+                    src="./images/Spotify.png"
+                    alt="Slide 1"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img 
+                  class="w-100"
+                    src="./images/Spotify.png"
+                    alt="Slide 2"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExample2"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExample2"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+              </button>
+            </div>
+            <p>Detalles del proyecto 2...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+      <div class="container">
+        <h2 class="text-shadow-primary">Contáctame</h2>
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="name" required />
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Mensaje</label>
+            <textarea
+              class="form-control"
+              id="message"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-3" style="background-color: #262626fb;">
+      <p>&copy; 2024 Kevin Garcia. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function (event) {
+          event.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - window.innerHeight * 0.05,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+    // Animacion confeti al enviar el formulario
+    document.querySelector('form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const form = this;
+      //mensage de exito bootstrap
+      const successMessage = document.createElement('div');
+      successMessage.classList.add('alert', 'alert-success', 'mt-3');
+      successMessage.textContent = 'Mensaje enviado correctamente!';
+      form.appendChild(successMessage);
+      successMessage.style.opacity = 0;
+      successMessage.style.transition = 'opacity 1s ease-in-out';
+      setTimeout(() => {
+        successMessage.style.opacity = 1;
+      }, 100);
+      setTimeout(() => {
+        successMessage.style.opacity = 0;
+        setTimeout(() => {
+      successMessage.remove();
+      form.reset();
+        }, 1000);
+      }, 3000);
+
+      // Animate confetti
+      const confettiContainer = document.createElement('div');
+      confettiContainer.classList.add('confetti-container');
+      document.body.appendChild(confettiContainer);
+
+      for (let i = 0; i < 100; i++) {
+        const confetti = document.createElement('div');
+        confetti.classList.add('confetti');
+        confetti.style.left = `${Math.random() * 100}vw`;
+        confetti.style.animationDelay = `${Math.random() * 2}s`;
+        confettiContainer.appendChild(confetti);
+      }
+
+      setTimeout(() => {
+        confettiContainer.remove();
+      }, 5000);
+    });
+
+    // Add confetti styles
+    const style = document.createElement('style');
+    style.textContent = `
+      .confetti-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 9999;
+      }
+      .confetti {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: #7b38d4;
+        opacity: 0.7;
+        animation: confetti-fall 3s linear infinite;
+      }
+      @keyframes confetti-fall {
+        0% {
+      transform: translateY(-100vh) rotate(0deg);
+        }
+        100% {
+      transform: translateY(100vh) rotate(360deg);
+        }
+      }
+    `;
+    document.head.appendChild(style);
+    document.querySelectorAll('.gusto-item-expand').forEach(item => {
+      item.addEventListener('click', function () {
+        // Alternar la clase 'expanded' para expandir o colapsar
+        this.classList.toggle('expanded');
+
+        // Asegurarse de que solo un elemento esté expandido a la vez (opcional)
+        document.querySelectorAll('.gusto-item-expand').forEach(otherItem => {
+          if (otherItem !== this) {
+            otherItem.classList.remove('expanded');
+          }
+        });
+      });
+    });
+
+
+    </script>
+  </body>
+</html>
